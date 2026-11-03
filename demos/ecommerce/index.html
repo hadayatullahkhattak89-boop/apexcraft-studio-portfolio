@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NovaStore | Premium Cyber &amp; Lifestyle Gear (Client Demo)</title>
+  <meta name="description" content="Interactive demo of NovaStore - High-conversion modern e-commerce storefront crafted by ApexCraft Studio.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../../assets/favicon/favicon.png">
+
+  <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- E-Commerce Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Demo Banner -->
+  <div class="demo-top-banner">
+    <div class="demo-banner-content">
+      <div class="demo-banner-tag">
+        <span class="pulse-dot-cyan"></span>
+        <span>LIVE CLIENT DEMO &bull; E-Commerce Web Store</span>
+      </div>
+      <a href="../../index.html#demos" class="demo-return-link">
+        <i class="fas fa-arrow-left"></i> Return to Main Portfolio
+      </a>
+    </div>
+  </div>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    <div class="container announcement-inner">
+      <span><i class="fas fa-tag"></i> <strong>SPRING SALE:</strong> Use code <mark>APEX20</mark> at checkout for 20% OFF! Free worldwide shipping on orders over $150.</span>
+    </div>
+  </div>
+
+  <!-- Main Store Navbar -->
+  <nav class="store-nav">
+    <div class="container store-nav-inner">
+      <!-- Store Brand -->
+      <a href="#" class="store-brand">
+        <div class="store-logo-box">
+          <i class="fas fa-bolt"></i>
+        </div>
+        <span>Nova<span class="text-neon">Store</span></span>
+      </a>
+
+      <!-- Search Input -->
+      <div class="store-search-wrapper">
+        <i class="fas fa-search search-icon"></i>
+        <input type="text" id="product-search" class="store-search-input" placeholder="Search gadgets, audio, accessories..." aria-label="Search products">
+        <button type="button" id="clear-search" class="clear-search-btn" style="display: none;" aria-label="Clear search">&times;</button>
+      </div>
+
+      <!-- Nav Actions -->
+      <div class="store-nav-actions">
+        <button type="button" class="cart-trigger-btn" id="cart-open-btn" aria-label="Open Shopping Bag">
+          <i class="fas fa-bag-shopping"></i>
+          <span class="cart-badge" id="cart-badge-count">0</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Promotional Banner -->
+  <header class="store-hero">
+    <div class="container store-hero-inner">
+      <div class="hero-text-side">
+        <span class="promo-pill"><i class="fas fa-fire"></i> New Spring Arrivals 2026</span>
+        <h1 class="hero-store-title">Engineered For <br><span class="text-neon">Peak Performance</span></h1>
+        <p class="hero-store-desc">
+          Explore high-precision audio gear, minimalist EDC gadgets, and ultra-durable accessories designed for digital nomads and power users.
+        </p>
+        <div class="hero-store-badges">
+          <span><i class="fas fa-shield-check"></i> 2-Year Warranty</span>
+          <span><i class="fas fa-truck-fast"></i> Express Delivery</span>
+          <span><i class="fas fa-rotate-left"></i> 30-Day Free Returns</span>
+        </div>
+      </div>
+      <div class="hero-feature-card">
+        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&amp;q=80" alt="Featured ANC Wireless Headphones" class="featured-img" loading="eager">
+        <div class="featured-info">
+          <span class="featured-tag">Staff Pick</span>
+          <h3>Apex ANC Wireless Pro</h3>
+          <div class="featured-price-row">
+            <span class="price-now">$189</span>
+            <span class="price-was">$249</span>
+            <button type="button" class="btn-quick-add" onclick="quickAddToCart(1)">Add to Bag</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Catalog Section -->
+  <main class="container catalog-section">
+    <!-- Category & Sort Controls -->
+    <div class="catalog-toolbar">
+      <div class="category-tabs" id="category-tabs" role="tablist">
+        <button type="button" class="cat-tab active" data-category="all">All Products</button>
+        <button type="button" class="cat-tab" data-category="audio">Audio</button>
+        <button type="button" class="cat-tab" data-category="gadgets">Gadgets</button>
+        <button type="button" class="cat-tab" data-category="fashion">Fashion</button>
+        <button type="button" class="cat-tab" data-category="accessories">Accessories</button>
+      </div>
+
+      <div class="sort-wrapper">
+        <label for="sort-select" class="sort-label">Sort by:</label>
+        <select id="sort-select" class="sort-select">
+          <option value="featured">Featured</option>
+          <option value="price-low">Price: Low to High</option>
+          <option value="price-high">Price: High to Low</option>
+          <option value="rating">Highest Rated</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Active Search Indicator -->
+    <div id="search-status-bar" style="display: none; margin-bottom: 1.5rem; font-size: 0.95rem; color: var(--text-muted);">
+      Showing results for: "<span id="search-term-display" style="color: var(--neon-cyan); font-weight: 700;"></span>"
+    </div>
+
+    <!-- Products Grid -->
+    <div class="products-grid" id="products-grid">
+      <!-- Injected by script.js -->
+    </div>
+
+    <!-- Empty State -->
+    <div class="empty-state" id="empty-state" style="display: none;">
+      <i class="fas fa-magnifying-glass empty-icon"></i>
+      <h3>No products matched your criteria</h3>
+      <p>Try searching for headphones, watch, flask, or keyboard.</p>
+      <button type="button" class="btn-reset-filters" id="btn-reset-filters">Reset All Filters</button>
+    </div>
+  </main>
+
+  <!-- Cart Drawer Overlay -->
+  <div class="cart-overlay" id="cart-overlay"></div>
+
+  <!-- Cart Drawer Component -->
+  <aside class="cart-drawer" id="cart-drawer" aria-labelledby="cart-drawer-title">
+    <div class="cart-drawer-header">
+      <div class="cart-title-row">
+        <i class="fas fa-bag-shopping"></i>
+        <h3 id="cart-drawer-title">Your Shopping Bag</h3>
+        <span class="cart-count-pill" id="cart-drawer-count">(0)</span>
+      </div>
+      <button type="button" class="close-drawer-btn" id="cart-close-btn" aria-label="Close Shopping Bag">&times;</button>
+    </div>
+
+    <div class="cart-items-container" id="cart-items-container">
+      <!-- Items dynamically populated -->
+    </div>
+
+    <div class="cart-drawer-footer" id="cart-drawer-footer">
+      <!-- Promo Code Input -->
+      <div class="promo-box">
+        <input type="text" id="promo-input" class="promo-input" placeholder="Promo code (e.g. APEX20)" aria-label="Promo code">
+        <button type="button" id="apply-promo-btn" class="promo-btn">Apply</button>
+      </div>
+      <div id="promo-msg" class="promo-message" style="display: none;"></div>
+
+      <!-- Financial Calculation -->
+      <div class="cart-totals-list">
+        <div class="total-row">
+          <span>Subtotal</span>
+          <span id="cart-subtotal">$0.00</span>
+        </div>
+        <div class="total-row" id="discount-row" style="display: none; color: #10b981;">
+          <span>Discount (20% OFF)</span>
+          <span id="cart-discount">-$0.00</span>
+        </div>
+        <div class="total-row">
+          <span>Estimated Shipping</span>
+          <span id="cart-shipping">Free</span>
+        </div>
+        <div class="total-row total-highlight">
+          <span>Total</span>
+          <span id="cart-grand-total">$0.00</span>
+        </div>
+      </div>
+
+      <!-- Checkout Button -->
+      <button type="button" class="btn-checkout" id="checkout-trigger-btn">
+        <i class="fas fa-lock"></i> Proceed to Checkout
+      </button>
+      <p class="cart-guarantee"><i class="fas fa-shield-alt"></i> 256-Bit SSL Encrypted Checkout</p>
+    </div>
+  </aside>
+
+  <!-- Checkout Simulation Modal -->
+  <div class="modal-overlay" id="checkout-modal">
+    <div class="modal-dialog checkout-dialog">
+      <button type="button" class="modal-close-btn" id="checkout-close-btn">&times;</button>
+      
+      <div id="checkout-step-form">
+        <div class="checkout-header">
+          <div class="store-brand" style="margin-bottom: 0.5rem;">
+            <div class="store-logo-box"><i class="fas fa-bolt"></i></div>
+            <span>Nova<span class="text-neon">Store</span> Checkout</span>
+          </div>
+          <p style="font-size: 0.85rem; color: var(--text-muted);">Simulated instant customer checkout flow</p>
+        </div>
+
+        <form id="simulated-checkout-form">
+          <div class="form-section-title"><i class="fas fa-location-dot"></i> Shipping Destination</div>
+          <div class="checkout-form-grid">
+            <div class="c-group">
+              <label>Full Name</label>
+              <input type="text" class="c-input" id="c-name" placeholder="Alexander Vance" required value="Alexander Vance">
+            </div>
+            <div class="c-group">
+              <label>Email Address</label>
+              <input type="email" class="c-input" id="c-email" placeholder="alexander@company.com" required value="alexander@company.com">
+            </div>
+            <div class="c-group full-width">
+              <label>Street Address</label>
+              <input type="text" class="c-input" id="c-address" placeholder="742 Evergreen Terrace" required value="742 Evergreen Terrace">
+            </div>
+            <div class="c-group">
+              <label>City &amp; Postal Code</label>
+              <input type="text" class="c-input" id="c-city" placeholder="Austin, TX 78701" required value="Austin, TX 78701">
+            </div>
+            <div class="c-group">
+              <label>Country</label>
+              <select class="c-input" id="c-country">
+                <option value="US">United States</option>
+                <option value="UK">United Kingdom</option>
+                <option value="CA">Canada</option>
+                <option value="AU">Australia</option>
+                <option value="EU">European Union</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-section-title" style="margin-top: 1.25rem;"><i class="fas fa-credit-card"></i> Payment Method</div>
+          <div class="payment-options">
+            <label class="payment-method-card active">
+              <input type="radio" name="payment-method" value="card" checked>
+              <span><i class="fas fa-credit-card"></i> Credit / Debit Card</span>
+            </label>
+            <label class="payment-method-card">
+              <input type="radio" name="payment-method" value="apple">
+              <span><i class="fab fa-apple-pay"></i> Apple Pay</span>
+            </label>
+            <label class="payment-method-card">
+              <input type="radio" name="payment-method" value="cod">
+              <span><i class="fas fa-money-bill-wave"></i> Cash on Delivery</span>
+            </label>
+          </div>
+
+          <div class="checkout-summary-pill">
+            <span>Amount Due:</span>
+            <strong id="modal-checkout-total" style="color: var(--neon-cyan); font-size: 1.2rem;">$0.00</strong>
+          </div>
+
+          <button type="submit" class="btn-checkout" style="width: 100%; margin-top: 1rem;">
+            <i class="fas fa-check-circle"></i> Place Order (Simulation)
+          </button>
+        </form>
+      </div>
+
+      <!-- Step 2: Order Confirmed Screen -->
+      <div id="checkout-step-success" style="display: none; text-align: center; padding: 1.5rem 0;">
+        <div class="success-icon-box">
+          <i class="fas fa-check"></i>
+        </div>
+        <h2 style="font-size: 1.6rem; margin-bottom: 0.5rem;">Order Confirmed!</h2>
+        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;">
+          Thank you for testing the NovaStore e-commerce demo. Your simulated order has been placed.
+        </p>
+
+        <div class="order-receipt-box">
+          <div class="receipt-row">
+            <span>Order Number:</span>
+            <strong id="receipt-order-id" style="font-family: monospace; color: var(--neon-cyan);">NOVA-849201</strong>
+          </div>
+          <div class="receipt-row">
+            <span>Estimated Delivery:</span>
+            <strong>3–5 Business Days</strong>
+          </div>
+          <div class="receipt-row">
+            <span>Payment Status:</span>
+            <span style="color: #10b981; font-weight: 700;"><i class="fas fa-circle-check"></i> Authorized</span>
+          </div>
+        </div>
+
+        <button type="button" class="btn-checkout" id="btn-continue-shopping" style="margin-top: 1.5rem; width: 100%;">
+          Continue Shopping
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quick View Modal -->
+  <div class="modal-overlay" id="quick-view-modal">
+    <div class="modal-dialog qv-dialog">
+      <button type="button" class="modal-close-btn" id="qv-close-btn">&times;</button>
+      <div class="qv-grid">
+        <div class="qv-img-wrap">
+          <img id="qv-img" src="" alt="Product Image">
+        </div>
+        <div class="qv-info">
+          <span class="qv-cat" id="qv-cat">Category</span>
+          <h2 class="qv-title" id="qv-title">Product Title</h2>
+          <div class="qv-rating" id="qv-rating">
+            <!-- Stars -->
+          </div>
+          <div class="qv-price-row">
+            <span class="qv-price-now" id="qv-price-now">$0</span>
+            <span class="qv-price-was" id="qv-price-was">$0</span>
+          </div>
+          <p class="qv-desc" id="qv-desc">Description</p>
+          <div class="qv-action-row">
+            <div class="qv-qty-selector">
+              <button type="button" id="qv-qty-minus">-</button>
+              <span id="qv-qty-val">1</span>
+              <button type="button" id="qv-qty-plus">+</button>
+            </div>
+            <button type="button" class="btn-add-cart" id="qv-add-btn">
+              <i class="fas fa-cart-shopping"></i> Add to Bag
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Element -->
+  <div class="store-toast" id="store-toast"></div>
+
+  <!-- Demo Footer -->
+  <footer class="store-footer">
+    <div class="container store-footer-inner">
+      <p>&copy; 2026 NovaStore &bull; Client Showcase Demo engineered by <strong>ApexCraft Studio</strong>.</p>
+      <a href="../../index.html#demos" class="footer-return-link">← Return to Main Agency Portfolio</a>
+    </div>
+  </footer>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" class="brand-svg-mark">
+  <defs>
+    <!-- Facet 1 Gradient (Left Ascent) -->
+    <linearGradient id="apex-grad-left" x1="15" y1="85" x2="50" y2="15" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#4f46e5"/>
+      <stop offset="60%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+
+    <!-- Facet 2 Gradient (Right Ascent) -->
+    <linearGradient id="apex-grad-right" x1="50" y1="15" x2="85" y2="85" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="50%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+
+    <!-- Facet 3 Gradient (Inner Core & Code Bridge) -->
+    <linearGradient id="apex-grad-core" x1="30" y1="58" x2="70" y2="58" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="50%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#10b981"/>
+    </linearGradient>
+
+    <!-- Ambient Shadow & Glow -->
+    <linearGradient id="apex-grad-base" x1="20" y1="85" x2="80" y2="85" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#4338ca"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+
+    <filter id="apex-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background Hexagonal Aura (Subtle) -->
+  <polygon points="50,6 88,28 88,72 50,94 12,72 12,28" stroke="url(#apex-grad-right)" stroke-width="1.5" stroke-opacity="0.25" fill="rgba(10, 16, 38, 0.6)"/>
+
+  <!-- Left Facet: Ascending Apex Peak (Left Wing of A & Code Bracket <) -->
+  <path d="M50 14L20 78L34 78L50 44L56 57L63 44L50 14Z" fill="url(#apex-grad-left)"/>
+
+  <!-- Right Facet: Descending Apex Wing (Right Wing of A & Code Bracket >) -->
+  <path d="M50 14L80 78L66 78L50 44L57 30L50 14Z" fill="url(#apex-grad-right)"/>
+
+  <!-- Floating Tech Diamond / Summit Crown (The Apex Point) -->
+  <polygon points="50,14 43,26 50,34 57,26" fill="#38bdf8" filter="url(#apex-glow)"/>
+
+  <!-- Precision Code Crossbar Core (Connecting Bridge) -->
+  <path d="M30 62L44 62L50 51L56 62L70 62L62 72L50 72L38 72L30 62Z" fill="url(#apex-grad-core)" filter="url(#apex-glow)"/>
+
+  <!-- Base Accents: Dual Code Nodes -->
+  <circle cx="20" cy="78" r="3.5" fill="#6366f1"/>
+  <circle cx="80" cy="78" r="3.5" fill="#06b6d4"/>
+</svg>

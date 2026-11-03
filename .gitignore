@@ -1,0 +1,10 @@
+# Sub-projects (each has its own dedicated GitHub repository)
+inventory_pos_system/
+school system/
+website1/
+dist/
+
+# System and logs
+*.log
+.DS_Store
+Thumbs.db

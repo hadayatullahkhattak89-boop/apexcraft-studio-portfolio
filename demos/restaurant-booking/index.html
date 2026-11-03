@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Savor &amp; Spice | Luxury Fine Dining &amp; Table Reservations</title>
+  <meta name="description" content="Interactive demo of Savor &amp; Spice - Luxury hospitality and table reservation website crafted by ApexCraft Studio.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../../assets/favicon/favicon.png">
+
+  <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Restaurant Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Demo Banner -->
+  <div class="resto-top-banner">
+    <div class="resto-banner-content">
+      <div class="resto-banner-tag">
+        <span class="pulse-gold-dot"></span>
+        <span>LIVE CLIENT DEMO &bull; Hospitality &amp; Table Reservation Engine</span>
+      </div>
+      <a href="../../index.html#demos" class="resto-return-link">
+        <i class="fas fa-arrow-left"></i> Return to Main Portfolio
+      </a>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="resto-navbar">
+    <div class="container resto-nav-container">
+      <a href="#" class="resto-brand">
+        <span class="resto-brand-mark"><i class="fas fa-wine-glass"></i></span>
+        <span>Savor &amp; <span class="text-gold">Spice</span></span>
+      </a>
+
+      <ul class="resto-nav-links">
+        <li><a href="#about" class="r-nav-link">The Experience</a></li>
+        <li><a href="#menu" class="r-nav-link">Curated Menu</a></li>
+        <li><a href="#chef" class="r-nav-link">Chef's Table</a></li>
+        <li><a href="#reserve" class="r-nav-link">Reservations</a></li>
+      </ul>
+
+      <div>
+        <a href="#reserve" class="btn-gold">
+          <i class="fas fa-calendar-check"></i> Book a Table
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="resto-hero">
+    <div class="container resto-hero-inner">
+      <span class="resto-hero-tag">An Unforgettable Culinary Journey</span>
+      <h1 class="resto-headline">
+        Artisan Gastronomy <br>Meets <span class="text-gold">Timeless Luxury</span>
+      </h1>
+      <p class="resto-subtext">
+        Indulge in seasonal tasting menus orchestrated with precision by Michelin-starred culinary artisans in an intimate, candlelit ambiance.
+      </p>
+
+      <div class="resto-hero-actions">
+        <a href="#reserve" class="btn-gold btn-large">
+          <i class="fas fa-utensils"></i> Reserve Your Table
+        </a>
+        <a href="#menu" class="btn-outline-gold btn-large">
+          <i class="fas fa-book-open"></i> Discover the Menu
+        </a>
+      </div>
+
+      <!-- Highlights Bar -->
+      <div class="resto-highlights">
+        <div class="highlight-item">
+          <i class="fas fa-award"></i>
+          <h4>Michelin Star Rated</h4>
+          <p>Excellence recognized internationally</p>
+        </div>
+        <div class="highlight-item">
+          <i class="fas fa-leaf"></i>
+          <h4>Farm-to-Table Organic</h4>
+          <p>Produce sourced fresh daily</p>
+        </div>
+        <div class="highlight-item">
+          <i class="fas fa-wine-bottle"></i>
+          <h4>Curated Cellar</h4>
+          <p>Over 800 rare vintage bottles</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- About / Experience Section -->
+  <section class="container resto-section" id="about">
+    <div class="resto-split-grid">
+      <div class="split-image-wrap">
+        <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?w=800&amp;q=80" alt="Fine dining ambiance" class="split-image">
+        <div class="image-accent-badge">
+          <span>Established 2018 &bull; Michelin Guide</span>
+        </div>
+      </div>
+      <div class="split-content">
+        <span class="section-tag-gold">Philosophy of Flavor</span>
+        <h2 class="resto-title">Crafted with Passion, Served with Elegance</h2>
+        <p class="resto-p">
+          At Savor &amp; Spice, dining transcends mere sustenance. Executive Chef Matteo Laurent combines classical French foundations with Mediterranean seasonal botanicals to produce tasting courses that captivate the senses.
+        </p>
+        <p class="resto-p">
+          Every table is bathed in soft architectural lighting, accompanied by handcrafted crystal stemware and bespoke tableware commissioned from artisan ceramicists.
+        </p>
+        <div class="chef-signature-row">
+          <div>
+            <strong>Chef Matteo Laurent</strong>
+            <span style="display: block; font-size: 0.85rem; color: var(--gold-light);">Executive Head Chef</span>
+          </div>
+          <span style="font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.4rem; color: var(--gold);">Matteo L.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Curated Food Menu Section -->
+  <section class="resto-menu-section" id="menu">
+    <div class="container">
+      <div class="resto-header-center">
+        <span class="section-tag-gold">Seasonal Culinary Creations</span>
+        <h2 class="resto-title">The Spring Tasting Menu</h2>
+        <p class="resto-desc">Hand-selected dishes prepared with rare ingredients and exceptional culinary craft.</p>
+      </div>
+
+      <!-- Menu Category Tabs -->
+      <div class="menu-tabs-row" role="tablist">
+        <button type="button" class="m-tab active" data-category="all">All Courses</button>
+        <button type="button" class="m-tab" data-category="starters">Starters &amp; Crudo</button>
+        <button type="button" class="m-tab" data-category="mains">Signature Mains</button>
+        <button type="button" class="m-tab" data-category="specials">Chef Tasting Specials</button>
+        <button type="button" class="m-tab" data-category="desserts">Artisan Desserts</button>
+        <button type="button" class="m-tab" data-category="wines">Vintage Cellar</button>
+      </div>
+
+      <!-- Dishes Grid -->
+      <div class="dishes-grid" id="dishes-grid">
+        <!-- Dynamically injected by script.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Table Reservation Section -->
+  <section class="container resto-section" id="reserve">
+    <div class="reservation-card">
+      <div class="res-header">
+        <span class="section-tag-gold">Online Table Bookings</span>
+        <h2 class="resto-title" style="margin-bottom: 0.5rem;">Reserve Your Culinary Experience</h2>
+        <p style="color: var(--resto-muted); font-size: 0.95rem;">
+          Reservations open 30 days in advance. Instant confirmation provided via our online concierge.
+        </p>
+      </div>
+
+      <form id="reservation-form" class="res-form">
+        <div class="res-grid">
+          <!-- Guests -->
+          <div class="r-group">
+            <label><i class="fas fa-users"></i> Number of Guests</label>
+            <div class="guest-counter">
+              <button type="button" id="guest-minus">-</button>
+              <span id="guest-val">2 Guests</span>
+              <button type="button" id="guest-plus">+</button>
+            </div>
+          </div>
+
+          <!-- Date -->
+          <div class="r-group">
+            <label><i class="fas fa-calendar-day"></i> Reservation Date</label>
+            <input type="date" id="res-date" class="r-input" required>
+          </div>
+
+          <!-- Seating Area -->
+          <div class="r-group">
+            <label><i class="fas fa-chair"></i> Seating Preference</label>
+            <select id="res-area" class="r-input">
+              <option value="Main Dining Salon">Main Dining Salon (Romantic)</option>
+              <option value="Chef's Open Counter">Chef's Open Counter (Interactive)</option>
+              <option value="Rooftop Garden Terrace">Rooftop Garden Terrace (City View)</option>
+              <option value="Private Wine Vault">Private Wine Vault (Exclusive)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Time Slots Selection -->
+        <div class="time-slots-section">
+          <label class="r-label"><i class="fas fa-clock"></i> Select Dining Time Slot</label>
+          <div class="time-slots-grid">
+            <button type="button" class="time-slot-btn" data-time="5:30 PM">5:30 PM</button>
+            <button type="button" class="time-slot-btn" data-time="6:15 PM">6:15 PM</button>
+            <button type="button" class="time-slot-btn active" data-time="7:00 PM">7:00 PM</button>
+            <button type="button" class="time-slot-btn" data-time="7:45 PM">7:45 PM</button>
+            <button type="button" class="time-slot-btn" data-time="8:30 PM">8:30 PM</button>
+            <button type="button" class="time-slot-btn" data-time="9:15 PM">9:15 PM</button>
+          </div>
+        </div>
+
+        <!-- Personal Details -->
+        <div class="res-grid" style="margin-top: 1.5rem;">
+          <div class="r-group">
+            <label><i class="fas fa-user"></i> Full Name *</label>
+            <input type="text" id="res-name" class="r-input" placeholder="Eleanor Vance" required value="Eleanor Vance">
+          </div>
+          <div class="r-group">
+            <label><i class="fas fa-envelope"></i> Email Address *</label>
+            <input type="email" id="res-email" class="r-input" placeholder="eleanor@company.com" required value="eleanor@company.com">
+          </div>
+          <div class="r-group">
+            <label><i class="fab fa-whatsapp"></i> Phone / WhatsApp *</label>
+            <input type="tel" id="res-phone" class="r-input" placeholder="+1 (555) 349-2810" required value="+1 (555) 349-2810">
+          </div>
+        </div>
+
+        <!-- Special Requests -->
+        <div class="r-group" style="margin-top: 1.25rem;">
+          <label><i class="fas fa-utensils"></i> Dietary Requirements / Special Occasion Notes</label>
+          <input type="text" id="res-notes" class="r-input" placeholder="e.g. Wedding Anniversary, severe nut allergy, window table requested...">
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn-gold btn-block" style="margin-top: 1.75rem;">
+          <i class="fas fa-calendar-check"></i> Complete Table Reservation
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Booking Confirmation Modal -->
+  <div class="modal-overlay" id="booking-modal">
+    <div class="modal-dialog res-modal-dialog">
+      <button type="button" class="modal-close-btn" id="booking-close-btn">&times;</button>
+      
+      <div style="text-align: center;">
+        <div class="gold-icon-circle">
+          <i class="fas fa-check"></i>
+        </div>
+        <span class="section-tag-gold">Reservation Confirmed</span>
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 1.8rem; margin: 0.5rem 0 1rem;">
+          We Look Forward to Welcoming You
+        </h2>
+        <p style="color: var(--resto-muted); font-size: 0.95rem; margin-bottom: 1.5rem;">
+          Your table has been reserved with executive seating. A booking confirmation has been dispatched to your email and WhatsApp.
+        </p>
+
+        <!-- Summary Receipt -->
+        <div class="res-receipt">
+          <div class="receipt-item">
+            <span>Booking Reference:</span>
+            <strong id="confirm-ref" style="color: var(--gold); font-family: monospace;">SAVOR-84920</strong>
+          </div>
+          <div class="receipt-item">
+            <span>Primary Guest:</span>
+            <strong id="confirm-name">Eleanor Vance</strong>
+          </div>
+          <div class="receipt-item">
+            <span>Party Size:</span>
+            <strong id="confirm-guests">2 Guests</strong>
+          </div>
+          <div class="receipt-item">
+            <span>Date &amp; Time:</span>
+            <strong id="confirm-datetime">Today at 7:00 PM</strong>
+          </div>
+          <div class="receipt-item">
+            <span>Dining Room:</span>
+            <strong id="confirm-area">Main Dining Salon</strong>
+          </div>
+        </div>
+
+        <button type="button" class="btn-gold" id="btn-close-confirm" style="width: 100%; margin-top: 1.5rem;">
+          Done &bull; Return to Menu
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="resto-toast" id="resto-toast"></div>
+
+  <!-- Footer -->
+  <footer class="resto-footer">
+    <div class="container resto-footer-inner">
+      <div>
+        <h4 style="font-family: 'Playfair Display', serif; font-size: 1.3rem; margin-bottom: 0.4rem;">Savor &amp; Spice</h4>
+        <p style="color: var(--resto-muted); font-size: 0.85rem;">42 Kensington Avenue, Knightsbridge &bull; Smart Elegant Dress Code</p>
+      </div>
+      <div>
+        <p>&copy; 2026 Savor &amp; Spice &bull; Client Showcase Demo engineered by <strong>ApexCraft Studio</strong>.</p>
+      </div>
+      <div>
+        <a href="../../index.html#demos" class="resto-return-link">← Return to Main Agency Portfolio</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>
